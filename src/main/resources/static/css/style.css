@@ -80,7 +80,8 @@ body {
     transform: translateY(-50%);
 }
 .chatbot .chatbox{
-    height: 510px;
+    height: 430px;
+    max-height: 470px;
     overflow-y: auto;
     padding: 30px 20px 70px;
 }
@@ -103,9 +104,9 @@ body {
     justify-content: flex-end;
 }
 .chatbox .chat p {
-    color: #fff;
+    color: #000000;
     max-width: 75%;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;
     background: #ecb501;
@@ -162,3 +163,52 @@ body {
         display: block;
     }
 }
+/* Style for the quick-reply button */
+.quick-reply {
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.quick-reply button {
+    padding: 10px 15px;
+    background-color: #9e9e9e;
+    border: none;
+    color: #fff;
+    font-size: 0.85rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quick-reply button:hover {
+    background-color: #ecb501;
+}
+/* Scroll for most browser */
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+.chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+.chatbox::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the scrollbar track */
+    border-radius: 10px;
+}
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: #888; /* Darker color for the scrollbar thumb */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* Matches the track background for a subtle border */
+}
+.chatbox::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb on hover */
+}
+/* Custom scrollbar for Firefox */
+.chatbox {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+/* Optionally style the scrollbar corner for both browsers */
+.chatbox::-webkit-scrollbar-corner,
+.chatbox::-webkit-resizer {
+    background-color: #f1f1f1;
+}
+
